@@ -12,7 +12,7 @@ function SelectLanguage (props) {
           <li
             style={lang === props.selectedLanguage
               ? {color: '#d0021b'}
-              //: null we can pass null or use another color
+              //  : null we can pass null or use another color
               : {color: '#3d5165'}
             }
             onClick={props.onSelect.bind(null, lang)}
@@ -32,8 +32,8 @@ function RepoGrid (props) {
       {props.repos.map((repo, index) => {
         return (
           <li key={repo.name} className='popular-item'>
-            <div className="popular-rank">#{index + 1}</div>
-            <ul className="space-list-items">
+            <div className='popular-rank'>#{index + 1}</div>
+            <ul className='space-list-items'>
               <li>
                 <img
                   className='avatar'
@@ -53,33 +53,31 @@ function RepoGrid (props) {
 }
 
 RepoGrid.propTypes = {
-  repos: PropTypes.array.isRequired,
+  repos: PropTypes.array.isRequired
 }
 
 SelectLanguage.PropTypes = {
   selectedLanguage: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired
 }
 
-
-
 class Popular extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
       selectedLanguage: 'All',
-      repos: null,
+      repos: null
     }
 
     this.updateLanguage = this.updateLanguage.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.updateLanguage(this.state.selectedLanguage)
   }
 
-  updateLanguage(lang) {
+  updateLanguage (lang) {
     this.setState(() => {
       return {
         selectedLanguage: lang,
@@ -97,7 +95,7 @@ class Popular extends Component {
       })
   }
 
-  render() {
+  render () {
     return (
       <div>
         <SelectLanguage
@@ -113,4 +111,4 @@ class Popular extends Component {
   }
 }
 
-export default Popular;
+export default Popular

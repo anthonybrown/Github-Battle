@@ -1,10 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import Popular from './Popular';
+import React from 'react'
+import Popular from './Popular'
 
 class App extends React.Component {
-  render() {
+  render () {
     return (
       <div className='container'>
         <Popular />

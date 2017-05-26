@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactDOM from 'react-dom'
+import './index.css'
 
 class Users extends React.Component {
-  render() {
+  render () {
     let friends = this.props.list.filter((user) => {
       return user.friend === true
     })
@@ -20,7 +20,7 @@ class Users extends React.Component {
           })}
         </ul>
 
-        <hr/>
+        <hr />
 
         <h1>Non Friends</h1>
         <ul>
@@ -30,26 +30,25 @@ class Users extends React.Component {
         </ul>
 
       </div>
-    );
+    )
   }
 }
 
 Users.propTypes = {
-  list: PropTypes.array.isRequired,
+  list: PropTypes.array.isRequired
 }
 
-
 ReactDOM.render(
-    <Users list={[
-      { id: 1, name: 'Tyler', friend: true },
-      { id: 2, name: 'Ryan', friend: true },
-      { id: 3, name: 'Michael', friend: false },
-      { id: 4, name: 'Mikenzi', friend: false },
-      { id: 5, name: 'Jessica', friend: true },
-      { id: 6, name: 'Dan', friend: false } ]}
-    />,
+  <Users list={[
+    { id: 1, name: 'Tyler', friend: true },
+    { id: 2, name: 'Ryan', friend: true },
+    { id: 3, name: 'Michael', friend: false },
+    { id: 4, name: 'Mikenzi', friend: false },
+    { id: 5, name: 'Jessica', friend: true },
+    { id: 6, name: 'Dan', friend: false } ]}
+  />,
     document.getElementById('root')
-);
+)
 
 // import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
