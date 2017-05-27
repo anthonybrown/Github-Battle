@@ -1,11 +1,12 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -13,7 +14,10 @@ module.exports = {
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] }
     ]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [new HtmlWebpackPlugin({
     template: 'app/index.html'
   })]
-};
+}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import api from '../utils/api'
 
 function SelectLanguage (props) {
-  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python']
+  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'PHP', 'Python', 'CSS']
   return (
     <ul className='languages'>
       {languages.map(function (lang) {
