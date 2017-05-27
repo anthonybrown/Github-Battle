@@ -47,3 +47,50 @@ li {
   width: 150px;
   border-radius: 50%;
 }
+
+.nav {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+ a,
+ .nav a {
+   text-decoration: none;
+   color: rgb(208, 2, 27);
+ }
+
+.active {
+  font-weight: 700;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  color: #e6e6e6;
+  background-color: #0a0a0a;
+  border: none;
+  font-size: 16px;
+  border-radius: 16px;
+  widows: 200px;
+  text-align: center;
+  display: block;
+  padding: 7px;
+  margin: 10px auto;
+}
+
+  .button:hover:enabled {
+    background: liner-gradient(#1a1a1a, #0a0a0a);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .button:active {
+    transform: translateY(1px);
+  }
