@@ -16,8 +16,12 @@ class App extends React.Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/battle' component={Battle} />
             <Route path='/popular' component={Popular} />
-            <Route render={function () {
-              return <p>Not Found</p>
+            <Route render={() => {
+              return (
+                <h3 className='text-center'>
+                  Sorry, couldn't find what you are looking for...Please try again.
+                </h3>
+              )
             }} />
           </Switch>
         </div>

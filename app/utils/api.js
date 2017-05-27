@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 module.exports = {
-  fetchPopularRepos: function (language) {
+  fetchPopularRepos: (language) => {
     var encodedURI =
       window.encodeURI(
         'https://api.github.com/search/repositories?q=stars:>1+language:' +
@@ -9,7 +9,7 @@ module.exports = {
       )
 
     return axios.get(encodedURI)
-      .then(function (response) {
+      .then((response) => {
         return response.data.items
       })
   }
