@@ -99,7 +99,7 @@ class Popular extends React.Component {
         />
         {
           !this.state.repos
-            ? <p>LOADING!</p>
+            ? <p className='loader'>&nbsp;</p>
           : <RepoGrid repos={this.state.repos} />
         }
       </div>
