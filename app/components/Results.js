@@ -7,12 +7,11 @@ import PlayerPreview from './PlayerPreview'
 
 const Profile = (props) => {
   let info = props.info
-
   return (
     <PlayerPreview
       avatar={info.avatar_url}
       username={info.login}>
-      <ul className='space-list-items'>
+      <ul className='className'>
         {info.name && <li>{info.name}</li>}
         {info.location && <li>{info.location}</li>}
         {info.company && <li>{info.company}</li>}
@@ -27,7 +26,7 @@ const Profile = (props) => {
 
 const Player = (props) => {
   return (
-    <div className='column'>
+    <div>
       <h1 className='header'>{props.label}</h1>
       <h3 style={{textAlign: 'center'}}>Score: {props.score}</h3>
       <Profile info={props.profile} />
@@ -107,7 +106,7 @@ class Results extends Component {
           profile={winner.profile}
         />
         <Player
-          label='runner up'
+          label='loser'
           score={loser.score}
           profile={loser.profile}
         />
