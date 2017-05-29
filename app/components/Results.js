@@ -106,7 +106,7 @@ class Results extends Component {
           profile={winner.profile}
         />
         <Player
-          label='loser'
+          label='runner up'
           score={loser.score}
           profile={loser.profile}
         />
