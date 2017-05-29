@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import queryString from 'query-string'
 import api from '../utils/api'
 import PlayerPreview from './PlayerPreview'
+// import Loading from './Loading'
 
 const Profile = (props) => {
   let info = props.info
@@ -86,6 +87,7 @@ class Results extends Component {
     let loading = this.state.loading
 
     if (loading === true) {
+    // </Loading /> /* or use the CSS spinner */
       return <p className='loader'>&nbsp;</p>
     }
 

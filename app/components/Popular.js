@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import api from '../utils/api'
+import Loading from './Loading'
 
 const SelectLanguage = (props) => {
   var languages = ['All', 'JavaScript', 'Ruby', 'PHP', 'Java', 'CSS', 'Python']
@@ -60,6 +61,7 @@ SelectLanguage.propTypes = {
 class Popular extends React.Component {
   constructor (props) {
     super()
+
     this.state = {
       selectedLanguage: 'All',
       repos: null
@@ -99,8 +101,9 @@ class Popular extends React.Component {
         />
         {
           !this.state.repos
-            ? <p className='loader'>&nbsp;</p>
-          : <RepoGrid repos={this.state.repos} />
+            ? <Loading />
+            /* <p className='loader'>&nbsp;</p> */
+            : <RepoGrid repos={this.state.repos} />
         }
       </div>
     )

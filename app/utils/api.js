@@ -3,7 +3,7 @@ import axios from 'axios'
 // if you experience any rate limiting from hitting the Github api
 // USE THIS CODE & APPEND params TO THE END OF YOUR CALLS
 const id = '72dddd16069600a13c13' /* SECRET ID */
-const secret = 'cef4e89cd065a4f7b9887d916da9b195b4ce30c6' /* SECRET */
+const secret = '1d4171894a9c4672742e5ade7b0fa9af71153097' /* SECRET */
 let params = `?client_id${id}&client_secrete=${secret}`
 
 const getProfile = (username) => {
